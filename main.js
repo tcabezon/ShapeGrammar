@@ -14,10 +14,11 @@ let frameChangeRate =1;
 let frameChangeRateSlider=1;
 let w=document.documentElement.clientWidth 
 console.log('canvas width',w)
-let canvasWidth=w*0.9/7
-let canvasHeight=w*0.9/7
+
 let backgroundColor=200
 let iterations=[5,25,50,200];
+let canvasWidth=w*0.9/iterations.length
+let canvasHeight=w*0.9/iterations.length
 let div="c1"
 
 for (let i = 0; i<iterations.length;i++){
