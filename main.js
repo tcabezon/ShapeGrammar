@@ -17,7 +17,7 @@ console.log('canvas width',w)
 let canvasWidth=w*0.9/7
 let canvasHeight=w*0.9/7
 let backgroundColor=200
-let iterations=[1,5,25,50,100,200,500];
+let iterations=[5,25,50,200];
 let div="c1"
 
 for (let i = 0; i<iterations.length;i++){
