@@ -7,7 +7,7 @@
     <style>
         
         html, body {
-        
+        height: 100%;
         text-align: center;
         }
 
@@ -33,18 +33,21 @@
         }
 
     </style>
+    
 
   </head>
   <body>
-    <br><br><br>
     <h1>HW 1</h1>
     <p>Tomas Cabezon Pedroso</p>
     <div class="slidecontainer">
-      <p> Frame Rate value: <input type="range" min="0.5" max="20.5" value="2.5" class="slider" id="myRange">
+      <p> Frame Rate value: <input type="range" min="0.5" max="200.5" value="0.5" class="slider" id="myRange">
       <span id="demo"></span></p>
+      <p id="pattern"> Pattern: </p>
     </div>
-    <br>
+
     
+
+    <br>
           
           <br>
           <div id="c10"> </div><br>
@@ -60,6 +63,12 @@
     
 
     <script>
+    
+    var userPattern = prompt('Please enter the pattern ','');
+      if (userPattern!=null){
+        document.getElementById('pattern').innerHTML="Pattern "+userPattern
+      }
+
       function myFunction() {
           var x = document.getElementById("patternString").value;
           document.getElementById("textdemo").innerHTML = x;
@@ -67,13 +76,13 @@
       var frameChangeRateSlider;
       //get slider value
       var slider = document.getElementById("myRange");
-      var output = document.getElementById("demo");
-      output.innerHTML = slider.value;
-      slider.oninput = function() {
-          output.innerHTML = this.value;
-          frameChangeRateSlider=parseFloat(this.value);
-          console.log('frame cr',frameChangeRateSlider)
-      }
+                var output = document.getElementById("demo");
+                output.innerHTML = slider.value;
+                slider.oninput = function() {
+                    output.innerHTML = this.value;
+                    frameChangeRateSlider=parseFloat(this.value);
+                    console.log('frame cr',frameChangeRateSlider)
+                }
       
     </script>
     

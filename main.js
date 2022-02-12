@@ -4,11 +4,10 @@ import SgInDiv from "./sgInDiv.js";
 
 
 
-
 let points=[[100,150],[250,300],[300,150]]
 let lines=[]
 let angle=90
-let pattern='AB'
+let pattern=userPattern
 let count=0
 let frameChangeRate =1;
 let frameChangeRateSlider=1;
@@ -26,7 +25,7 @@ for (let i = 0; i<iterations.length;i++){
         
         let div='c'+j
         console.log('div',div)
-        new SgInDiv(points, lines,j, 'AC', iterations[i],count,frameChangeRate,canvasWidth,canvasHeight,backgroundColor,div);
+        new SgInDiv(points, lines,j, userPattern, iterations[i],count,frameChangeRate,canvasWidth,canvasHeight,backgroundColor,div);
     }
 }
 
