@@ -62,7 +62,7 @@ export default class SG{
         return [p1Rotated,p2Rotated]
     }
     rotatePointsAndAddLine(p5){
-        if (this.pattern[this.count%this.pattern.length]== "A"){
+        if (this.pattern[this.count%this.pattern.length]== "A" || this.pattern[this.count%this.pattern.length]== "a"){
             let p1= this.points[0]
             let p2=this.points[1]
             //console.log('rotation A')
@@ -75,7 +75,7 @@ export default class SG{
             //console.log('rotation A point 1',p1, '\npoint 2',p2, '\nrotated',rotated[0],rotated[1])
            
         }
-        if (this.pattern[this.count%this.pattern.length]== "B"){
+        if (this.pattern[this.count%this.pattern.length]== "B" || this.pattern[this.count%this.pattern.length]== "b"){
             let p1= this.points[1]
             let p2=this.points[2]
             //console.log('rotation B')
@@ -86,7 +86,7 @@ export default class SG{
             this.points[1]=rotated[0]
             this.points[2]=rotated[1]
         }
-        if (this.pattern[this.count%this.pattern.length]== "C"){
+        if (this.pattern[this.count%this.pattern.length]== "C" || this.pattern[this.count%this.pattern.length]== "c"){
             let p1= this.points[0]
             let p2=this.points[2]
             //console.log('rotation C')
