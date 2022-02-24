@@ -1,11 +1,10 @@
-import SgInDiv from "./sgInDiv.js";
+import SgInDiv from "./sgInDivProcess.js";
 
 
 
 
 
 let points=[[100,150],[250,300],[300,150]]
-//let points=[[100,100],[200,200],[350,350]]
 let lines=[]
 let angle=90
 let pattern=userPattern
@@ -16,7 +15,7 @@ let w=document.documentElement.clientWidth
 console.log('canvas width',w)
 
 let backgroundColor=200
-let iterations=[5,25,100,200,500];
+let iterations=[5,25,50,200];
 let canvasWidth=w*0.75/iterations.length
 let canvasHeight=w*0.75/iterations.length
 let div="c1"

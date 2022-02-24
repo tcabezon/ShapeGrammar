@@ -18,7 +18,7 @@ export default class SG{
         for (let i = 0; i < lines.length; i++) {
             linesCopy[i] = lines[i];
           }
-        this.initialPoints=pointsCopy
+        this.initialPoints=points
         this.points=pointsCopy
         this.lines=linesCopy
         this.angle=angle * (Math.PI/180)
@@ -37,12 +37,12 @@ export default class SG{
         
         let p1Rotated=[mp[0]+v12[0]/2*Math.cos(this.angle)-v12[1]/2*Math.sin(this.angle),mp[1]+v12[0]/2*Math.sin(this.angle)+v12[1]/2*Math.cos(this.angle)]
         let p2Rotated=[mp[0]-v12[0]/2*Math.cos(this.angle)+v12[1]/2*Math.sin(this.angle),mp[1]-v12[0]/2*Math.sin(this.angle)-v12[1]/2*Math.cos(this.angle)]
-        /*
+        
         p5.stroke('red')
         p5.noFill()
         p5.ellipse(mp[0],mp[1],d,d)
         p5.line(p1[0],p1[1],p2[0],p2[1])
-        p5.line(p1Rotated[0],p1Rotated[1],p2Rotated[0],p2Rotated[1])*/
+        p5.line(p1Rotated[0],p1Rotated[1],p2Rotated[0],p2Rotated[1])
         
 
         return [p1Rotated,p2Rotated]

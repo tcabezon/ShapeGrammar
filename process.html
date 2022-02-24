@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script type="module" src="mainProcess.js"></script>
+    <meta charset="utf-8" />
+    <style>
+        
+        html, body {
+        height: 100%;
+        text-align: center;
+        }
+
+        html {
+            display: table;
+            margin: auto;
+        }
+
+        body {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        div {
+          
+          display: inline;
+        }
+        .container{
+          display: inline;
+        }
+
+        .sg{
+          flex:block;
+        }
+
+    </style>
+    
+
+  </head>
+  <body>
+    <h1>HW 1</h1>
+    <p>Tomas Cabezon Pedroso</p>
+    <div class="slidecontainer">
+      <p> Frame Rate value: <input type="range" min="0.5" max="200.5" value="0.5" class="slider" id="myRange">
+      <span id="demo"></span></p>
+      <p id="pattern"> Pattern: </p>
+    </div>
+
+    
+
+    <br>
+          
+          <br>
+          <div id="c10"> </div><br>
+          <div id="c20"> </div><br>
+          <div id="c30"></div><br>
+          <div id="c40"></div><br>
+          <div id="c50"> </div>   <br>
+          <div id="c60"></div><br>
+          <div id="c70"> </div><br>
+          <div id="c80"></div><br>    
+          <div id="c90"></div><br>
+    <br>
+    
+
+    <script>
+    
+    var userPattern = prompt('Please enter the pattern ','');
+      if (userPattern!=null){
+        document.getElementById('pattern').innerHTML="Pattern "+userPattern
+      }
+
+      function myFunction() {
+          var x = document.getElementById("patternString").value;
+          document.getElementById("textdemo").innerHTML = x;
+    }
+      var frameChangeRateSlider;
+      //get slider value
+      var slider = document.getElementById("myRange");
+                var output = document.getElementById("demo");
+                output.innerHTML = slider.value;
+                slider.oninput = function() {
+                    output.innerHTML = this.value;
+                    frameChangeRateSlider=parseFloat(this.value);
+                    console.log('frame cr',frameChangeRateSlider)
+                }
+      
+    </script>
+    
+	  
+  </body>
+
+</html>
