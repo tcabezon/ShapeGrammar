@@ -39,7 +39,7 @@ export default class SgInDiv{
                 sg.showPointsAndLines(p5);
                 //console.log('iterations',sg.iterations)
                 if(sg.count<sg.iterations){
-                    if(sg.count<=15){
+                    /*if(sg.count<=15){
                         sg.rotatePointsAndAddLine(p5);
                     }
                     else{
@@ -52,8 +52,8 @@ export default class SgInDiv{
                         sg.rotatePointsAndAddLine(p5);
                         sg.rotatePointsAndAddLine(p5);
                         sg.rotatePointsAndAddLine(p5);
-                    }
-                  
+                    }*/
+                    sg.rotatePointsAndAddLine(p5);
                 }
             }
 
