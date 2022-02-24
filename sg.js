@@ -105,7 +105,7 @@ export default class SG{
 
     showPointsAndLines(p5,backgroundColorOn=true){
         
-        p5.strokeWeight(2);
+        p5.strokeWeight(0.25);
         for (let i = 0; i < this.lines.length; i++) {
             p5.stroke(80)
             p5.line(this.lines[i][0], this.lines[i][1], this.lines[i][2], this.lines[i][3]);
